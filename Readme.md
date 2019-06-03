@@ -21,3 +21,17 @@ cd douban
 scrapy spider movie -o output.csv
 ```
 
+## exp3
+实验三 词向量和朴素贝叶斯分类
+- sogou.py 对搜狗新闻进行分词处理并生成本地文件的脚本
+- result/_dict.txt sogou.py的结果，其中每一个词后面有一个空格
+- gen/_vec.py 使用前面分词的结果生成词向量的脚本，建议使用ipython运行后进一步实验word2vector的相关功能以加深理解
+- mail.py 贝叶斯分类对中文邮件处理的脚本
+
+数据部分在data目录下
+- word/ 文件夹中每一个文件是一篇搜狗新闻，用作生成词向量的语料库
+- spam.utf8 邮件分类器的垃圾邮件训练集，每一行是一封垃圾邮件
+- ham.utf8 邮件分类器的正常邮件训练集，每一行是一封正常邮件
+- word/_dict.utf8 mail.py生成的中间结果,用于存储字典
+- spam/ 邮件分类器的垃圾邮件测试集
+- ham/ 邮件分类器的正常邮件测试集(未用到)
